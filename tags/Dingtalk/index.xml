@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Dingtalk on 夜辰 | Night1918 Blog</title>
+        <link>https://blog.night1918.top/tags/Dingtalk/</link>
+        <description>Recent content in Dingtalk on 夜辰 | Night1918 Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Mon, 18 Nov 2024 13:42:12 +0800</lastBuildDate><atom:link href="https://blog.night1918.top/tags/Dingtalk/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>下载钉钉直播回放的方法</title>
+        <link>https://blog.night1918.top/posts/64109.html</link>
+        <pubDate>Wed, 03 May 2023 19:57:15 +0800</pubDate>
+        
+        <guid>https://blog.night1918.top/posts/64109.html</guid>
+        <description>&lt;img src="https://blog.night1918.top/posts/64109/fiddler.png" alt="Featured image of post 下载钉钉直播回放的方法" /&gt;&lt;h2 id=&#34;准备工作&#34;&gt;准备工作
+&lt;/h2&gt;&lt;p&gt;1.1 从官网下载并安装&lt;a class=&#34;link&#34; href=&#34;https://www.telerik.com/download/fiddler/fiddler2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Fiddler2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;1.2 下载并安装m3u8-downloader&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这是一个用C#编写的开源命令行m3u8/HLS/dash下载器,支持普通AES-128-CBC解密,多线程,自定义请求头,Github地址:https://github.com/nilaoda/N_m3u8DL-CLI 下载release最新版即可&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;配置环境&#34;&gt;配置环境
+&lt;/h2&gt;&lt;p&gt;2.1 打开Fiddler,点击Tools&amp;ndash;&amp;gt;Options&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.night1918.top/posts/64109/Dingtalk-Download-1.png&#34;
+	width=&#34;716&#34;
+	height=&#34;201&#34;
+	srcset=&#34;https://blog.night1918.top/posts/64109/Dingtalk-Download-1_hu18085488348416420987.png 480w, https://blog.night1918.top/posts/64109/Dingtalk-Download-1_hu2263104101274137773.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;356&#34;
+		data-flex-basis=&#34;854px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;2.2 依次点击如下按键,打勾使得Options界面如下图所示(会弹出不安全提示框,点击yes即可)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.night1918.top/posts/64109/Dingtalk-Download-2.png&#34;
+	width=&#34;1093&#34;
+	height=&#34;539&#34;
+	srcset=&#34;https://blog.night1918.top/posts/64109/Dingtalk-Download-2_hu258594205950300584.png 480w, https://blog.night1918.top/posts/64109/Dingtalk-Download-2_hu13596249228432587708.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;202&#34;
+		data-flex-basis=&#34;486px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;2.3 修改FiddlerScript,找到如下部分&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.night1918.top/posts/64109/Dingtalk-Download-3.png&#34;
+	width=&#34;1463&#34;
+	height=&#34;395&#34;
+	srcset=&#34;https://blog.night1918.top/posts/64109/Dingtalk-Download-3_hu3265735847070902703.png 480w, https://blog.night1918.top/posts/64109/Dingtalk-Download-3_hu4086225318827253654.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;370&#34;
+		data-flex-basis=&#34;888px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;在1处添加下列内容:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.night1918.top/posts/64109/Dingtalk-Download-4.png&#34;
+	width=&#34;602&#34;
+	height=&#34;126&#34;
+	srcset=&#34;https://blog.night1918.top/posts/64109/Dingtalk-Download-4_hu18048605486415550363.png 480w, https://blog.night1918.top/posts/64109/Dingtalk-Download-4_hu938385048798980993.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;477&#34;
+		data-flex-basis=&#34;1146px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sToInsert&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;script src=&amp;#39;https://cdn.bootcdn.net/ajax/libs/vConsole/3.9.0/vconsole.min.js&amp;#39;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script&amp;gt;var vConsole = new VConsole();console.log(&amp;#39;测试&amp;#39;);&amp;lt;/script&amp;gt;&amp;#34;&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;oSession&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;utilDecodeResponse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;oSession&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;utilReplaceOnceInResponse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;/head&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sToInsert&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;/head&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;修改后的效果:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.night1918.top/posts/64109/Dingtalk-Download-5.png&#34;
+	width=&#34;759&#34;
+	height=&#34;180&#34;
+	srcset=&#34;https://blog.night1918.top/posts/64109/Dingtalk-Download-5_hu9792911045449894582.png 480w, https://blog.night1918.top/posts/64109/Dingtalk-Download-5_hu15627442064448812616.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;421&#34;
+		data-flex-basis=&#34;1012px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;抓包&#34;&gt;抓包
+&lt;/h2&gt;&lt;p&gt;3.1 打开Fiddler,若界面上部出现如下黄色警告通知,点击通知内容即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.night1918.top/posts/64109/Dingtalk-Download-6.png&#34;
+	width=&#34;830&#34;
+	height=&#34;83&#34;
+	srcset=&#34;https://blog.night1918.top/posts/64109/Dingtalk-Download-6_hu3875225398266617396.png 480w, https://blog.night1918.top/posts/64109/Dingtalk-Download-6_hu13474838873228659552.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1000&#34;
+		data-flex-basis=&#34;2400px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;3.2 登录钉钉,打开直播回放,发现右下角出现绿色按钮,点击该按钮:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.night1918.top/posts/64109/Dingtalk-Download-7.png&#34;
+	width=&#34;1261&#34;
+	height=&#34;332&#34;
+	srcset=&#34;https://blog.night1918.top/posts/64109/Dingtalk-Download-7_hu5492043293624720825.png 480w, https://blog.night1918.top/posts/64109/Dingtalk-Download-7_hu16937886643554587712.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;379&#34;
+		data-flex-basis=&#34;911px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;3.3 在弹出界面的下方command一栏中输入&lt;code&gt;vConsole.showTab(&amp;quot;network&amp;quot;);&lt;/code&gt;并点击OK&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.night1918.top/posts/64109/Dingtalk-Download-8.png&#34;
+	width=&#34;1780&#34;
+	height=&#34;182&#34;
+	srcset=&#34;https://blog.night1918.top/posts/64109/Dingtalk-Download-8_hu9775582516791855878.png 480w, https://blog.night1918.top/posts/64109/Dingtalk-Download-8_hu1008857602976717723.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;978&#34;
+		data-flex-basis=&#34;2347px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;3.4 完成后弹出如下界面,点击第一个方法(Method)为GET的报文,出现所示下拉栏:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.night1918.top/posts/64109/Dingtalk-Download-9.png&#34;
+	width=&#34;1093&#34;
+	height=&#34;402&#34;
+	srcset=&#34;https://blog.night1918.top/posts/64109/Dingtalk-Download-9_hu9238988365432858465.png 480w, https://blog.night1918.top/posts/64109/Dingtalk-Download-9_hu10480813989723375975.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;271&#34;
+		data-flex-basis=&#34;652px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;3.5 复制图中url内容并保存&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.night1918.top/posts/64109/Dingtalk-Download-10.png&#34;
+	width=&#34;1655&#34;
+	height=&#34;432&#34;
+	srcset=&#34;https://blog.night1918.top/posts/64109/Dingtalk-Download-10_hu496983780941352188.png 480w, https://blog.night1918.top/posts/64109/Dingtalk-Download-10_hu6449306687556542147.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;383&#34;
+		data-flex-basis=&#34;919px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;下载&#34;&gt;下载
+&lt;/h2&gt;&lt;p&gt;4.1 任意打开一个浏览器,输入刚刚保存的url,下载这个m3u8文件&lt;/p&gt;
+&lt;p&gt;4.2 打开m3u8下载器,选择工作目录,并将m3u8文件拖拽到对应位置&lt;/p&gt;
+&lt;p&gt;4.3 BASEURL处填写url,只保留live_hp前面的部分即可,点击Go开始下载&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.night1918.top/posts/64109/Dingtalk-Download-11.jpg&#34;
+	width=&#34;402&#34;
+	height=&#34;558&#34;
+	srcset=&#34;https://blog.night1918.top/posts/64109/Dingtalk-Download-11_hu10074872835991165507.jpg 480w, https://blog.night1918.top/posts/64109/Dingtalk-Download-11_hu7136455214720919516.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;72&#34;
+		data-flex-basis=&#34;172px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;4.4 弹出的DOS窗口中可以清晰看到视频的分辨率信息,下载速度,文件大小等,至此,一个视频回放文件下载结束&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.night1918.top/posts/64109/Dingtalk-Download-12.jpg&#34;
+	width=&#34;644&#34;
+	height=&#34;278&#34;
+	srcset=&#34;https://blog.night1918.top/posts/64109/Dingtalk-Download-12_hu8737867538753997262.jpg 480w, https://blog.night1918.top/posts/64109/Dingtalk-Download-12_hu12468952898376183105.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;231&#34;
+		data-flex-basis=&#34;555px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

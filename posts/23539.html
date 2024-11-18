@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="此文记录一下配置FLutter环境的步骤（防止自己忘记）\nSTEP 1: Java SDK 这里我使用的是jdk-17.0.8，官网地址Java Archive Downloads - Java SE 17，选择并下载Windows x64 Compressed Archive，如图：\n">
+<title>Windows搭建Flutter开发环境</title>
+
+<link rel='canonical' href='https://blog.night1918.top/posts/23539.html'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Windows搭建Flutter开发环境">
+<meta property='og:description' content="此文记录一下配置FLutter环境的步骤（防止自己忘记）\nSTEP 1: Java SDK 这里我使用的是jdk-17.0.8，官网地址Java Archive Downloads - Java SE 17，选择并下载Windows x64 Compressed Archive，如图：\n">
+<meta property='og:url' content='https://blog.night1918.top/posts/23539.html'>
+<meta property='og:site_name' content='夜辰 | Night1918 Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='flutter' /><meta property='article:published_time' content='2024-10-21T14:17:19&#43;08:00'/><meta property='article:modified_time' content='2024-11-18T13:42:12&#43;08:00'/><meta property='og:image' content='https://blog.night1918.top/posts/23539/flutter.png' />
+<meta name="twitter:title" content="Windows搭建Flutter开发环境">
+<meta name="twitter:description" content="此文记录一下配置FLutter环境的步骤（防止自己忘记）\nSTEP 1: Java SDK 这里我使用的是jdk-17.0.8，官网地址Java Archive Downloads - Java SE 17，选择并下载Windows x64 Compressed Archive，如图：\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://blog.night1918.top/posts/23539/flutter.png' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu12683388232946727239.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">夜辰 | Night1918 Blog</a></h1>
+            <h2 class="site-description">学习,就是发现自己越来越菜的过程</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Night1918'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:i@night1918.top'
+                        target="_blank"
+                        title="Email:i@night1918.top"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-messages" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
+  <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://blog.night1918.top/index.xml'
+                        target="_blank"
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>文章</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/contact/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>留言板</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/link/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#step-1-java-sdk">STEP 1: Java SDK</a></li>
+    <li><a href="#step-2-flutter-sdk">STEP 2: Flutter SDK</a></li>
+    <li><a href="#step-3-android-sdk">STEP 3: Android SDK</a></li>
+    <li><a href="#step-4-visual-studio">STEP 4: Visual Studio</a></li>
+    <li><a href="#step-5-android-studio">STEP 5: Android Studio</a></li>
+    <li><a href="#step-6-flutter-configure">STEP 6: Flutter Configure</a></li>
+    <li><a href="#参考文档">参考文档</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/posts/23539.html">
+                <img src="/posts/23539/flutter_hu7217714087249528540.png"
+                        srcset="/posts/23539/flutter_hu7217714087249528540.png 800w, /posts/23539/flutter_hu14008329784332134588.png 1600w"
+                        width="800" 
+                        height="240" 
+                        loading="lazy"
+                        alt="Featured image of post Windows搭建Flutter开发环境" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E6%95%99%E7%A8%8B/" >
+                教程
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/23539.html">Windows搭建Flutter开发环境</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Oct 21, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 4 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>此文记录一下配置FLutter环境的步骤（防止自己忘记）</p>
+<h2 id="step-1-java-sdk">STEP 1: Java SDK
+</h2><p>这里我使用的是<code>jdk-17.0.8</code>，官网地址<a class="link" href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html"  target="_blank" rel="noopener"
+    >Java Archive Downloads - Java SE 17</a>，选择并下载<code>Windows x64 Compressed Archive</code>，如图：</p>
+<p><img src="/posts/23539/flutter1.png"
+	width="1920"
+	height="896"
+	srcset="/posts/23539/flutter1_hu935539974538140435.png 480w, /posts/23539/flutter1_hu11314024659787682075.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="214"
+		data-flex-basis="514px"
+	
+></p>
+<p>解压至你想安装的目录下，在环境变量中添加变量名<code>JAVA_HOME</code>，值为<code>D:\Path\to\jdk-17.0.8\</code>，在环境变量<code>Path</code>中添加值<code>%JAVA_HOME%\bin\</code>。</p>
+<p>在<code>cmd</code>中运行<code>java --version</code>，若返回版本信息，则表明配置成功。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">C<span class="p">:</span><span class="nl">\Users\root</span><span class="c1">&gt;java --version</span>
+</span></span><span class="line"><span class="cl">openjdk 17.0.8 2023-07-18 LTS
+</span></span><span class="line"><span class="cl">OpenJDK Runtime Environment Microsoft-8035246 (build 17.0.8+7-LTS)
+</span></span><span class="line"><span class="cl">OpenJDK 64-Bit Server VM Microsoft-8035246 (build 17.0.8+7-LTS, mixed mode)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="step-2-flutter-sdk">STEP 2: Flutter SDK
+</h2><p>从Flutter官网<a class="link" href="https://docs.flutter.dev/release/archive"  target="_blank" rel="noopener"
+    >Archive | Flutter</a>或者Github<a class="link" href="https://github.com/flutter/flutter/releases"  target="_blank" rel="noopener"
+    >Releases · flutter/flutter</a>获取Flutter，解压至你想安装的目录下，在环境变量<code>Path</code>中添加值<code>D:\Path\to\Flutter\bin\</code>，在<code>cmd</code>中运行<code>flutter --version</code>，若返回版本信息，则表明配置成功。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">C<span class="p">:</span><span class="nl">\Users\root</span><span class="c1">&gt;flutter --version</span>
+</span></span><span class="line"><span class="cl">Flutter 3.24.3 • channel stable • https://github.com/flutter/flutter.git
+</span></span><span class="line"><span class="cl">Framework • revision 2663184aa7 (6 weeks ago) • 2024-09-11 16:27:48 -0500
+</span></span><span class="line"><span class="cl">Engine • revision 36335019a8
+</span></span><span class="line"><span class="cl">Tools • Dart 3.5.3 • DevTools 2.37.3
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>( optional ) For some known reasons, you can configure mirrors to access Flutter packages:</p>
+<p>Add two entries to your environment variables:</p>
+<ul>
+<li>Name: <code>PUB_HOSTED_URL</code> Value: <code>https://pub.flutter-io.cn</code></li>
+<li>Name: <code>FLUTTER_STORAGE_BASE_URL</code> Value: <code>https://storage.flutter-io.cn</code></li>
+</ul>
+<h2 id="step-3-android-sdk">STEP 3: Android SDK
+</h2><p>下载地址：<a class="link" href="https://developer.android.google.cn/studio"  target="_blank" rel="noopener"
+    >下载 Android Studio 和应用工具 - Android 开发者  | Android Developers</a></p>
+<p><img src="/posts/23539/flutter2.png"
+	width="1745"
+	height="646"
+	srcset="/posts/23539/flutter2_hu4602813726600716751.png 480w, /posts/23539/flutter2_hu8513322034500404002.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="270"
+		data-flex-basis="648px"
+	
+></p>
+<p>获取后解压至你想安装的目录下，这里以<code>D:\Android-SDK</code>为例，下载后将<code>cmdline-tools</code>内的所有文件放在<code>D:\Android-SDK\cmdline-tools\latest\</code>目录下，如图：</p>
+<p><img src="/posts/23539/flutter3.png"
+	width="1206"
+	height="212"
+	srcset="/posts/23539/flutter3_hu9188843054658716802.png 480w, /posts/23539/flutter3_hu9904034913941118961.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="568"
+		data-flex-basis="1365px"
+	
+></p>
+<p>在<code>D:\Android-SDK\cmdline-tools\latest\bin\</code>目录下打开<code>cmd</code>，输入<code>sdkmanager --list</code>，若返回列表，则表示配置成功。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">D<span class="p">:</span><span class="nl">\Android-SDK\cmdline-tools\latest\bin</span><span class="c1">&gt;sdkmanager --list</span>
+</span></span><span class="line"><span class="cl">Warning: Errors during XML parse:
+</span></span><span class="line"><span class="cl">Warning: Additionally, the fallback loader failed to parse the XML.
+</span></span><span class="line"><span class="cl">[=======================================] 100% Computing updates...
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Available Packages:
+</span></span><span class="line"><span class="cl">  <span class="k">Path</span>                                                                            <span class="p">|</span> Version           <span class="p">|</span> Description     
+</span></span><span class="line"><span class="cl">  -------                                                                         <span class="p">|</span> -------           <span class="p">|</span> -------         
+</span></span><span class="line"><span class="cl">  add-ons;addon-google_apis-google-15                                             <span class="p">|</span> 3                 <span class="p">|</span> Google APIs     
+</span></span><span class="line"><span class="cl">  add-ons;addon-google_apis-google-16                                             <span class="p">|</span> 4                 <span class="p">|</span> Google APIs     
+</span></span><span class="line"><span class="cl">  add-ons;addon-google_apis-google-17                                             <span class="p">|</span> 4                 <span class="p">|</span> Google APIs     
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">............
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>下载你需要的平台以及工具，还是在<code>D:\Android-SDK\cmdline-tools\latest\bin\</code>目录下打开<code>cmd</code>，输入<code>sdkmanager “platform-tools” “platforms;android-34”</code>安装<code>platform-tools</code>，输入<code>sdkmanager “build-tools;34.0.0”</code>安装<code>build-tools</code>。（这里你可以自行在刚刚的列表中选择你需要的平台和工具）</p>
+<h2 id="step-4-visual-studio">STEP 4: Visual Studio
+</h2><p>安装<code>Visual Studio</code>，官网地址：<a class="link" href="https://visualstudio.microsoft.com/zh-hans/downloads/"  target="_blank" rel="noopener"
+    >下载 Visual Studio Tools - 免费安装 Windows、Mac、Linux</a>，可以选择社区版，在安装界面勾选<code>使用C++的桌面开发</code>选项，在安装位置界面，根据需要选择是否修改IDE、缓存、SDK的存放路径。</p>
+<h2 id="step-5-android-studio">STEP 5: Android Studio
+</h2><p>从官网获取并安装<code>Android Studio</code>，地址：<a class="link" href="https://developer.android.com/studio?hl=zh-cn"  target="_blank" rel="noopener"
+    >下载 Android Studio 和应用工具 - Android 开发者  | Android Developers</a>。</p>
+<p>( optional ) Android Studio汉化：从<code>Jetbrains</code>下载中文语言包，地址：<a class="link" href="https://plugins.jetbrains.com/plugin/13710-chinese-simplified-language-pack----/versions/stable"  target="_blank" rel="noopener"
+    >Chinese (Simplified) Language Pack / 中文语言包 Plugin for JetBrains IDEs | JetBrains Marketplace</a>，下载后在<code>Android Studio</code>的插件页面导入本地插件，选择下载的中文语言包，导入成功后重启IDE即可完成汉化。</p>
+<h2 id="step-6-flutter-configure">STEP 6: Flutter Configure
+</h2><p>新增环境变量<code>ANDRIOD_HOME</code>，值为<code>Android SDK</code>安装目录，如<code>D:\Android-SDK\</code>，在<code>Path</code>中添加三个值：<code>%ANDROID_HOME%\tools</code>，<code>%ANDROID_HOME%\platform-tools</code>，<code>%ANDROID_HOME%\build-tools</code>，在<code>cmd</code>中运行<code>flutter config --android-sdk D:\Android-SDK\ </code>，向flutter指定<code>Android SDK</code>目录。</p>
+<p>检查<code>flutter</code>配置：在<code>cmd</code>中运行<code>flutter doctor </code>，查看各项配置是否正确。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">C<span class="p">:</span><span class="nl">\Users\root</span><span class="c1">&gt;flutter doctor</span>
+</span></span><span class="line"><span class="cl">Flutter assets will be downloaded from https://storage.flutter-io.cn. Make sure you trust this source!
+</span></span><span class="line"><span class="cl">Doctor summary (to see all details, run flutter doctor -v):
+</span></span><span class="line"><span class="cl">[√] Flutter (Channel stable, 3.24.3, on Microsoft Windows [版本 10.0.19045.5011], locale zh-CN)
+</span></span><span class="line"><span class="cl">[√] Windows Version (Installed version of Windows is version 10 or higher)
+</span></span><span class="line"><span class="cl">[√] Android toolchain - develop for Android devices (Android SDK version 34.0.0)
+</span></span><span class="line"><span class="cl">[√] Chrome - develop for the web
+</span></span><span class="line"><span class="cl">[√] Visual Studio - develop Windows apps (Visual Studio Community 2022 17.11.5)
+</span></span><span class="line"><span class="cl">[√] Android Studio (version 2024.1)
+</span></span><span class="line"><span class="cl">[√] Connected device (3 available)
+</span></span><span class="line"><span class="cl">[√] Network resources
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">• No issues found!
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>配置完成后，在<code>Android Studio</code>安装<code>flutter</code>和<code>dart</code>插件，开始<code>Flutter APP</code>的开发。</p>
+<h2 id="参考文档">参考文档
+</h2><p><a class="link" href="https://book.flutterchina.club/chapter1/install_flutter.html"  target="_blank" rel="noopener"
+    >1.3 搭建Flutter开发环境 | 《Flutter实战·第二版》</a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/flutter/">Flutter</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 Nov 18, 2024 13:42 &#43;0800
+        </span>
+    </section></footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/posts/64109.html">
+        
+        
+            <div class="article-image">
+                <img src="/posts/64109/fiddler.a697042fe890881bbb9785810b2d7cd0_hu9459816106376233790.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 下载钉钉直播回放的方法"
+                        data-key="64109" 
+                        data-hash="md5-ppcEL&#43;iQiBu7l4WBCy180A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">下载钉钉直播回放的方法</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/posts/23918.html">
+        
+        
+            <div class="article-image">
+                <img src="/posts/23918/BiliSuitDownload-2.5cc54597e8a42262848105c3dc034456_hu1841581442097705108.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 下载b站装扮素材的方法"
+                        data-key="23918" 
+                        data-hash="md5-XMVFl&#43;ikImKEgQXD3ANEVg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">下载b站装扮素材的方法</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="//cdn.jsdelivr.net/npm/twikoo@1.6.39/dist/twikoo.all.min.js"></script>
+<div id="tcomment"></div>
+<style>
+    .twikoo {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+    :root[data-scheme="dark"] {
+        --twikoo-body-text-color-main: rgba(255, 255, 255, 0.9);
+        --twikoo-body-text-color: rgba(255, 255, 255, 0.7);
+    }
+    .twikoo .el-input-group__prepend,
+    .twikoo .tk-action-icon,
+    .twikoo .tk-submit-action-icon,
+    .twikoo .tk-time,
+    .twikoo .tk-comments-no,
+    .twikoo .tk-comments-count {
+        color: var(--twikoo-body-text-color);
+    }
+    .twikoo .el-input__inner,
+    .twikoo .el-textarea__inner,
+    .twikoo .tk-preview-container,
+    .twikoo .tk-content,
+    .twikoo .tk-nick,
+    .twikoo .tk-send {
+        color: var(--twikoo-body-text-color-main);
+    }
+    .twikoo .el-button{
+        color: var(--twikoo-body-text-color)!important;
+    }
+    .twikoo .el-input__count {
+        color: var(--twikoo-body-text-color) !important;
+    }
+    .OwO .OwO-body {
+        background-color: var(--body-background) !important;
+        color: var(--body-text-color) !important;
+    }
+</style><script>
+    twikoo.init({
+        envId: 'https:\/\/blog-comment-twikoo.night1918.top\/',
+        el: '#tcomment',})
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2022 - 
+        
+        2024 夜辰 | Night1918 Blog
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

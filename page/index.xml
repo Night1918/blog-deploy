@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Pages on 夜辰 | Night1918 Blog</title>
+        <link>https://blog.night1918.top/page/</link>
+        <description>Recent content in Pages on 夜辰 | Night1918 Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language><atom:link href="https://blog.night1918.top/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>关于</title>
+        <link>https://blog.night1918.top/about/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.night1918.top/about/</guid>
+        <description>&lt;p&gt;萌新一枚，喜欢折腾一些感兴趣的东西。&lt;/p&gt;
+&lt;p&gt;我的Github主页：&lt;a class=&#34;link&#34; href=&#34;https://github.com/Night1918&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Night1918&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;联系方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Email: &lt;a class=&#34;link&#34; href=&#34;mailto:i@night1918.top&#34; &gt;i@night1918.top&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>留言板</title>
+        <link>https://blog.night1918.top/contact/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.night1918.top/contact/</guid>
+        <description>&lt;script src=&#34;https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdn.jsdelivr.net/gh/yaseng/jquery.barrager.js/dist/js/jquery.barrager.min.js&#34;&gt;&lt;/script&gt;
+&lt;style&gt;
+.barrage {
+    position: fixed;
+    right: -500px;
+    display: inline-block;
+    width: fit-content;
+    z-index: 99
+}
+.barrage_box {
+    display: flex;
+    background-color: rgba(0, 0, 0, .5);
+    padding-right: 8px;
+    height: 40px;
+    border-radius: 25px;
+}
+.barrage_box .portrait {
+    display: inline-block;
+    margin-top: 4px;
+    margin-left: 4px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.barrage_box .portrait img {
+    width: 100%;
+    height: 100%;
+}
+.barrage_box div.p a {
+    display: inline-block;
+    white-space: nowrap;
+    max-width: 25rem;
+    margin-right: 2px;
+    font-size: 14px;
+    line-height: 40px;
+    margin-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+}
+.barrage_box div.p a:hover {
+    text-decoration: underline;
+}
+&lt;/style&gt;
+&lt;div id=&#34;loading&#34;&gt;&lt;/div&gt;
+&lt;script&gt;
+let ls = []
+let Num = 0;
+// 以下注释为twikoo api的返回格式
+// 返回 Array，包含最新评论的
+//   * id:           评论 ID
+//   * url:          评论地址
+//   * nick:         昵称
+//   * mailMd5:      邮箱的 MD5 值，可用于展示头像
+//   * link:         网址
+//   * comment:      HTML 格式的评论内容
+//   * commentText:  纯文本格式的评论内容
+//   * created:      评论时间，格式为毫秒级时间戳
+//   * avatar:       头像地址（0.2.9 新增）
+//   * relativeTime: 相对评论时间，如 “1 小时前”（0.2.9 新增）
+// 返回示例: [ // 从新到旧顺序
+//   { id: &#39;&#39;, url: &#39;&#39;, nick: &#39;&#39;, mailMd5: &#39;&#39;, link: &#39;&#39;, comment: &#39;&#39;, commentText: &#39;&#39;, created: 0 },
+//   { id: &#39;&#39;, url: &#39;&#39;, nick: &#39;&#39;, mailMd5: &#39;&#39;, link: &#39;&#39;, comment: &#39;&#39;, commentText: &#39;&#39;, created: 0 },
+//   { id: &#39;&#39;, url: &#39;&#39;, nick: &#39;&#39;, mailMd5: &#39;&#39;, link: &#39;&#39;, comment: &#39;&#39;, commentText: &#39;&#39;, created: 0 }
+// ]
+window.onload = () =&gt; {
+    if (1&amp;&amp;document.body.clientWidth &gt; 200) {
+        document.getElementById(&#39;loading&#39;).innerHTML = &#39;&lt;div&gt;弹幕加载中...&lt;/div&gt;&#39;;
+        let barrageTime = &#39;&#39;
+        twikoo.getRecentComments({
+            envId: &#39;https://blog-comment-twikoo.night1918.top/&#39;, // 环境 ID
+            pageSize: 50, // 获取多少条，默认：10，最大：100
+            includeReply: true // 是否包括最新回复，默认：false
+        }).then((data) =&gt; {
+            data.forEach(i =&gt; {
+                if (i.avatar == undefined) i.avatar = &#39;https://cravatar.cn/avatar/d615d5793929e8c7d70eab5f00f7f5f1?d=mp&#39;
+                ls.push({
+                    img: i.avatar, //图片 
+                    info: i.nick + &#39;：&#39; + formatDanmaku(i.comment), //文字 
+                    href: i.url, //链接 
+                    close: false, //显示关闭按钮 
+                    speed: 15, //延迟,单位秒,默认6 
+                    // bottom: 70, //距离底部高度,单位px,默认随机 
+                    color: &#39;#fff&#39;, //颜色,默认白色 
+                    old_ie_color: &#39;#000000&#39;, //ie低版兼容色,不能与网页背景相同,默认黑色 
+                })
+            });
+            setTimeout(() =&gt; { document.getElementById(&#39;loading&#39;).innerHTML = &#39;&#39;; }, 2000);
+            setInterval(() =&gt; {
+                if (Num &gt;= ls.length) Num = 0
+                $(&#39;body&#39;).barrager(ls[Num]);
+                Num++;
+            }, 3000);
+            // 弹幕间隔时长
+        }).catch(function(err) { console.error(err); });
+    }else document.getElementById(&#39;loading&#39;).innerHTML = &#39;&lt;div class=&#34;note danger flat&#34;&gt;&lt;p&gt;已关闭弹幕功能，请在电脑上查看。&lt;/p&gt;&lt;/div&gt;&#39;
+}
+// 格式化评论
+function formatDanmaku(str) {
+    str = str.replace(/&lt;\/*br&gt;|[\s\uFEFF\xA0]+/g, &#39;&#39;);
+    str = str.replace(/&lt;img.*?&gt;/g, &#39;[图片]&#39;);
+    str = str.replace(/&lt;a.*?&gt;.*?&lt;\/a&gt;/g, &#39;[链接]&#39;);
+    str = str.replace(/&lt;pre.*?&gt;.*?&lt;\/pre&gt;/g, &#39;[代码块]&#39;);
+    str = str.replace(/&lt;.*?&gt;/g, &#39;&#39;);
+    return str
+}
+&lt;/script&gt;</description>
+        </item>
+        <item>
+        <title>搜索</title>
+        <link>https://blog.night1918.top/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.night1918.top/search/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>文章</title>
+        <link>https://blog.night1918.top/archives/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.night1918.top/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>友链</title>
+        <link>https://blog.night1918.top/link/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.night1918.top/link/</guid>
+        <description>&lt;p&gt;网站框架最近从hexo迁移至了hugo，这个页面还没有进行迁移，稍后再来看看吧&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

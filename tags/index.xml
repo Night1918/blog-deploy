@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tags on 夜辰 | Night1918 Blog</title>
+        <link>https://blog.night1918.top/tags/</link>
+        <description>Recent content in Tags on 夜辰 | Night1918 Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Mon, 18 Nov 2024 13:42:12 +0800</lastBuildDate><atom:link href="https://blog.night1918.top/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Flutter</title>
+        <link>https://blog.night1918.top/tags/flutter/</link>
+        <pubDate>Mon, 21 Oct 2024 14:17:19 +0800</pubDate>
+        
+        <guid>https://blog.night1918.top/tags/flutter/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Windows</title>
+        <link>https://blog.night1918.top/tags/Windows/</link>
+        <pubDate>Sun, 20 Oct 2024 15:55:28 +0800</pubDate>
+        
+        <guid>https://blog.night1918.top/tags/Windows/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Api</title>
+        <link>https://blog.night1918.top/tags/api/</link>
+        <pubDate>Fri, 04 Aug 2023 12:31:56 +0800</pubDate>
+        
+        <guid>https://blog.night1918.top/tags/api/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Vercel</title>
+        <link>https://blog.night1918.top/tags/vercel/</link>
+        <pubDate>Fri, 04 Aug 2023 12:31:56 +0800</pubDate>
+        
+        <guid>https://blog.night1918.top/tags/vercel/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Dingtalk</title>
+        <link>https://blog.night1918.top/tags/Dingtalk/</link>
+        <pubDate>Wed, 03 May 2023 19:57:15 +0800</pubDate>
+        
+        <guid>https://blog.night1918.top/tags/Dingtalk/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>BiliBili</title>
+        <link>https://blog.night1918.top/tags/BiliBili/</link>
+        <pubDate>Sat, 08 Apr 2023 22:00:11 +0800</pubDate>
+        
+        <guid>https://blog.night1918.top/tags/BiliBili/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Comment</title>
+        <link>https://blog.night1918.top/tags/comment/</link>
+        <pubDate>Tue, 24 Jan 2023 18:28:56 +0800</pubDate>
+        
+        <guid>https://blog.night1918.top/tags/comment/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Email</title>
+        <link>https://blog.night1918.top/tags/email/</link>
+        <pubDate>Tue, 24 Jan 2023 18:28:56 +0800</pubDate>
+        
+        <guid>https://blog.night1918.top/tags/email/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

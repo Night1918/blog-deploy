@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Flutter on 夜辰 | Night1918 Blog</title>
+        <link>https://blog.night1918.top/tags/flutter/</link>
+        <description>Recent content in Flutter on 夜辰 | Night1918 Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Mon, 18 Nov 2024 13:42:12 +0800</lastBuildDate><atom:link href="https://blog.night1918.top/tags/flutter/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Windows搭建Flutter开发环境</title>
+        <link>https://blog.night1918.top/posts/23539.html</link>
+        <pubDate>Mon, 21 Oct 2024 14:17:19 +0800</pubDate>
+        
+        <guid>https://blog.night1918.top/posts/23539.html</guid>
+        <description>&lt;img src="https://blog.night1918.top/posts/23539/flutter.png" alt="Featured image of post Windows搭建Flutter开发环境" /&gt;&lt;p&gt;此文记录一下配置FLutter环境的步骤（防止自己忘记）&lt;/p&gt;
+&lt;h2 id=&#34;step-1-java-sdk&#34;&gt;STEP 1: Java SDK
+&lt;/h2&gt;&lt;p&gt;这里我使用的是&lt;code&gt;jdk-17.0.8&lt;/code&gt;，官网地址&lt;a class=&#34;link&#34; href=&#34;https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Java Archive Downloads - Java SE 17&lt;/a&gt;，选择并下载&lt;code&gt;Windows x64 Compressed Archive&lt;/code&gt;，如图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.night1918.top/posts/23539/flutter1.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;896&#34;
+	srcset=&#34;https://blog.night1918.top/posts/23539/flutter1_hu935539974538140435.png 480w, https://blog.night1918.top/posts/23539/flutter1_hu11314024659787682075.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;214&#34;
+		data-flex-basis=&#34;514px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;解压至你想安装的目录下，在环境变量中添加变量名&lt;code&gt;JAVA_HOME&lt;/code&gt;，值为&lt;code&gt;D:\Path\to\jdk-17.0.8\&lt;/code&gt;，在环境变量&lt;code&gt;Path&lt;/code&gt;中添加值&lt;code&gt;%JAVA_HOME%\bin\&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;在&lt;code&gt;cmd&lt;/code&gt;中运行&lt;code&gt;java --version&lt;/code&gt;，若返回版本信息，则表明配置成功。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;\Users\root&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&amp;gt;java --version&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openjdk 17.0.8 2023-07-18 LTS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;OpenJDK Runtime Environment Microsoft-8035246 (build 17.0.8+7-LTS)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;OpenJDK 64-Bit Server VM Microsoft-8035246 (build 17.0.8+7-LTS, mixed mode)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;step-2-flutter-sdk&#34;&gt;STEP 2: Flutter SDK
+&lt;/h2&gt;&lt;p&gt;从Flutter官网&lt;a class=&#34;link&#34; href=&#34;https://docs.flutter.dev/release/archive&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Archive | Flutter&lt;/a&gt;或者Github&lt;a class=&#34;link&#34; href=&#34;https://github.com/flutter/flutter/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Releases · flutter/flutter&lt;/a&gt;获取Flutter，解压至你想安装的目录下，在环境变量&lt;code&gt;Path&lt;/code&gt;中添加值&lt;code&gt;D:\Path\to\Flutter\bin\&lt;/code&gt;，在&lt;code&gt;cmd&lt;/code&gt;中运行&lt;code&gt;flutter --version&lt;/code&gt;，若返回版本信息，则表明配置成功。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;\Users\root&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&amp;gt;flutter --version&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Flutter 3.24.3 • channel stable • https://github.com/flutter/flutter.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Framework • revision 2663184aa7 (6 weeks ago) • 2024-09-11 16:27:48 -0500
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Engine • revision 36335019a8
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Tools • Dart 3.5.3 • DevTools 2.37.3
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;( optional ) For some known reasons, you can configure mirrors to access Flutter packages:&lt;/p&gt;
+&lt;p&gt;Add two entries to your environment variables:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Name: &lt;code&gt;PUB_HOSTED_URL&lt;/code&gt; Value: &lt;code&gt;https://pub.flutter-io.cn&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Name: &lt;code&gt;FLUTTER_STORAGE_BASE_URL&lt;/code&gt; Value: &lt;code&gt;https://storage.flutter-io.cn&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;step-3-android-sdk&#34;&gt;STEP 3: Android SDK
+&lt;/h2&gt;&lt;p&gt;下载地址：&lt;a class=&#34;link&#34; href=&#34;https://developer.android.google.cn/studio&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;下载 Android Studio 和应用工具 - Android 开发者  | Android Developers&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.night1918.top/posts/23539/flutter2.png&#34;
+	width=&#34;1745&#34;
+	height=&#34;646&#34;
+	srcset=&#34;https://blog.night1918.top/posts/23539/flutter2_hu4602813726600716751.png 480w, https://blog.night1918.top/posts/23539/flutter2_hu8513322034500404002.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;270&#34;
+		data-flex-basis=&#34;648px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;获取后解压至你想安装的目录下，这里以&lt;code&gt;D:\Android-SDK&lt;/code&gt;为例，下载后将&lt;code&gt;cmdline-tools&lt;/code&gt;内的所有文件放在&lt;code&gt;D:\Android-SDK\cmdline-tools\latest\&lt;/code&gt;目录下，如图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.night1918.top/posts/23539/flutter3.png&#34;
+	width=&#34;1206&#34;
+	height=&#34;212&#34;
+	srcset=&#34;https://blog.night1918.top/posts/23539/flutter3_hu9188843054658716802.png 480w, https://blog.night1918.top/posts/23539/flutter3_hu9904034913941118961.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;568&#34;
+		data-flex-basis=&#34;1365px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;在&lt;code&gt;D:\Android-SDK\cmdline-tools\latest\bin\&lt;/code&gt;目录下打开&lt;code&gt;cmd&lt;/code&gt;，输入&lt;code&gt;sdkmanager --list&lt;/code&gt;，若返回列表，则表示配置成功。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;D&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;\Android-SDK\cmdline-tools\latest\bin&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&amp;gt;sdkmanager --list&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Warning: Errors during XML parse:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Warning: Additionally, the fallback loader failed to parse the XML.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[=======================================] 100% Computing updates...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Available Packages:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;Path&lt;/span&gt;                                                                            &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Version           &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Description     
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -------                                                                         &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; -------           &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; -------         
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  add-ons;addon-google_apis-google-15                                             &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 3                 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Google APIs     
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  add-ons;addon-google_apis-google-16                                             &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 4                 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Google APIs     
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  add-ons;addon-google_apis-google-17                                             &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 4                 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Google APIs     
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;............
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;下载你需要的平台以及工具，还是在&lt;code&gt;D:\Android-SDK\cmdline-tools\latest\bin\&lt;/code&gt;目录下打开&lt;code&gt;cmd&lt;/code&gt;，输入&lt;code&gt;sdkmanager “platform-tools” “platforms;android-34”&lt;/code&gt;安装&lt;code&gt;platform-tools&lt;/code&gt;，输入&lt;code&gt;sdkmanager “build-tools;34.0.0”&lt;/code&gt;安装&lt;code&gt;build-tools&lt;/code&gt;。（这里你可以自行在刚刚的列表中选择你需要的平台和工具）&lt;/p&gt;
+&lt;h2 id=&#34;step-4-visual-studio&#34;&gt;STEP 4: Visual Studio
+&lt;/h2&gt;&lt;p&gt;安装&lt;code&gt;Visual Studio&lt;/code&gt;，官网地址：&lt;a class=&#34;link&#34; href=&#34;https://visualstudio.microsoft.com/zh-hans/downloads/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;下载 Visual Studio Tools - 免费安装 Windows、Mac、Linux&lt;/a&gt;，可以选择社区版，在安装界面勾选&lt;code&gt;使用C++的桌面开发&lt;/code&gt;选项，在安装位置界面，根据需要选择是否修改IDE、缓存、SDK的存放路径。&lt;/p&gt;
+&lt;h2 id=&#34;step-5-android-studio&#34;&gt;STEP 5: Android Studio
+&lt;/h2&gt;&lt;p&gt;从官网获取并安装&lt;code&gt;Android Studio&lt;/code&gt;，地址：&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/studio?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;下载 Android Studio 和应用工具 - Android 开发者  | Android Developers&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;( optional ) Android Studio汉化：从&lt;code&gt;Jetbrains&lt;/code&gt;下载中文语言包，地址：&lt;a class=&#34;link&#34; href=&#34;https://plugins.jetbrains.com/plugin/13710-chinese-simplified-language-pack----/versions/stable&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Chinese (Simplified) Language Pack / 中文语言包 Plugin for JetBrains IDEs | JetBrains Marketplace&lt;/a&gt;，下载后在&lt;code&gt;Android Studio&lt;/code&gt;的插件页面导入本地插件，选择下载的中文语言包，导入成功后重启IDE即可完成汉化。&lt;/p&gt;
+&lt;h2 id=&#34;step-6-flutter-configure&#34;&gt;STEP 6: Flutter Configure
+&lt;/h2&gt;&lt;p&gt;新增环境变量&lt;code&gt;ANDRIOD_HOME&lt;/code&gt;，值为&lt;code&gt;Android SDK&lt;/code&gt;安装目录，如&lt;code&gt;D:\Android-SDK\&lt;/code&gt;，在&lt;code&gt;Path&lt;/code&gt;中添加三个值：&lt;code&gt;%ANDROID_HOME%\tools&lt;/code&gt;，&lt;code&gt;%ANDROID_HOME%\platform-tools&lt;/code&gt;，&lt;code&gt;%ANDROID_HOME%\build-tools&lt;/code&gt;，在&lt;code&gt;cmd&lt;/code&gt;中运行&lt;code&gt;flutter config --android-sdk D:\Android-SDK\ &lt;/code&gt;，向flutter指定&lt;code&gt;Android SDK&lt;/code&gt;目录。&lt;/p&gt;
+&lt;p&gt;检查&lt;code&gt;flutter&lt;/code&gt;配置：在&lt;code&gt;cmd&lt;/code&gt;中运行&lt;code&gt;flutter doctor &lt;/code&gt;，查看各项配置是否正确。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;\Users\root&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&amp;gt;flutter doctor&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Flutter assets will be downloaded from https://storage.flutter-io.cn. Make sure you trust this source!
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Doctor summary (to see all details, run flutter doctor -v):
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[√] Flutter (Channel stable, 3.24.3, on Microsoft Windows [版本 10.0.19045.5011], locale zh-CN)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[√] Windows Version (Installed version of Windows is version 10 or higher)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[√] Android toolchain - develop for Android devices (Android SDK version 34.0.0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[√] Chrome - develop for the web
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[√] Visual Studio - develop Windows apps (Visual Studio Community 2022 17.11.5)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[√] Android Studio (version 2024.1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[√] Connected device (3 available)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[√] Network resources
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;• No issues found!
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;配置完成后，在&lt;code&gt;Android Studio&lt;/code&gt;安装&lt;code&gt;flutter&lt;/code&gt;和&lt;code&gt;dart&lt;/code&gt;插件，开始&lt;code&gt;Flutter APP&lt;/code&gt;的开发。&lt;/p&gt;
+&lt;h2 id=&#34;参考文档&#34;&gt;参考文档
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://book.flutterchina.club/chapter1/install_flutter.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;1.3 搭建Flutter开发环境 | 《Flutter实战·第二版》&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
