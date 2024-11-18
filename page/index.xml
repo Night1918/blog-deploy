@@ -158,7 +158,10 @@ function formatDanmaku(str) {
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://blog.night1918.top/link/</guid>
-        <description>&lt;p&gt;网站框架最近从hexo迁移至了hugo，这个页面还没有进行迁移，稍后再来看看吧&lt;/p&gt;
+        <description>&lt;p&gt;欢迎交换友链哦~~~&lt;/p&gt;
+&lt;p&gt;在将您的网站添加到此页面之前，请先阅读&lt;a class=&#34;link&#34; href=&#34;https://github.com/Night1918/friends&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Night1918/friends&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;如果您的网站满足所有要求，您可以按照提供的步骤提交您的网站信息！&lt;/p&gt;
 </description>
         </item>
         
