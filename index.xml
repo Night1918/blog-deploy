@@ -5,7 +5,8 @@
         <link>https://blog.night1918.top/</link>
         <description>Recent content on 夜辰 | Night1918 Blog</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language><atom:link href="https://blog.night1918.top/index.xml" rel="self" type="application/rss+xml" /><item>
+        <language>zh-cn</language>
+        <lastBuildDate>Mon, 21 Oct 2024 14:17:19 +0800</lastBuildDate><atom:link href="https://blog.night1918.top/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Windows搭建Flutter开发环境</title>
         <link>https://blog.night1918.top/posts/23539.html</link>
         <pubDate>Mon, 21 Oct 2024 14:17:19 +0800</pubDate>

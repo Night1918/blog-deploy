@@ -10,7 +10,7 @@
 <meta property='og:description' content="学习,就是发现自己越来越菜的过程">
 <meta property='og:url' content='https://blog.night1918.top/tags/comment/'>
 <meta property='og:site_name' content='夜辰 | Night1918 Blog'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-11-19T21:42:47&#43;08:00 '/>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-10-21T14:17:19&#43;08:00 '/>
 <meta name="twitter:title" content="Tag: Comment - 夜辰 | Night1918 Blog">
 <meta name="twitter:description" content="学习,就是发现自己越来越菜的过程"><link rel="alternate" type="application/rss&#43;xml" href="https://blog.night1918.top/tags/comment/index.xml">
     </head>
@@ -99,13 +99,10 @@
                     >
                         
                         
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-messages" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
-  <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+  <path d="M3 7l9 6l9 -6" />
 </svg>
-
-
 
                         
                     </a>
@@ -557,12 +554,8 @@
     s1 = new Date(s1.replace(/-/g, "/"));
     let s2 = new Date();
     let timeDifference = s2.getTime() - s1.getTime();
-
     let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-
-    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    let result = days + "天";
     document.getElementById('runningdays').innerHTML = result;
 </script>
 <script src="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.js" crossorigin="anonymous"></script>
