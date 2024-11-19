@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="此文记录一下配置FLutter环境的步骤（防止自己忘记）\nSTEP 1: Java SDK 这里我使用的是jdk-17.0.8，官网地址Java Archive Downloads - Java SE 17，选择并下载Windows x64 Compressed Archive，如图：\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="此文记录一下配置FLutter环境的步骤（防止自己忘记）\nSTEP 1: Java SDK 这里我使用的是jdk-17.0.8，官网地址Java Archive Downloads - Java SE 17 ，选择并下载Windows x64 Compressed Archive，如图：\n">
 <title>Windows搭建Flutter开发环境</title>
 
 <link rel='canonical' href='https://blog.night1918.top/posts/23539.html'>
 
-<link rel="stylesheet" href="/scss/style.min.49dd8baa7acaece75117d8cc807dfd058ecd9906f113f5aa64abff73cfff16d9.css"><meta property='og:title' content="Windows搭建Flutter开发环境">
-<meta property='og:description' content="此文记录一下配置FLutter环境的步骤（防止自己忘记）\nSTEP 1: Java SDK 这里我使用的是jdk-17.0.8，官网地址Java Archive Downloads - Java SE 17，选择并下载Windows x64 Compressed Archive，如图：\n">
+<link rel="stylesheet" href="/scss/style.min.390375ad308c11ef2451fb6199761dbab8c7a720354f2f7b00167a0741144043.css"><meta property='og:title' content="Windows搭建Flutter开发环境">
+<meta property='og:description' content="此文记录一下配置FLutter环境的步骤（防止自己忘记）\nSTEP 1: Java SDK 这里我使用的是jdk-17.0.8，官网地址Java Archive Downloads - Java SE 17 ，选择并下载Windows x64 Compressed Archive，如图：\n">
 <meta property='og:url' content='https://blog.night1918.top/posts/23539.html'>
 <meta property='og:site_name' content='夜辰 | Night1918 Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='flutter' /><meta property='article:published_time' content='2024-10-21T14:17:19&#43;08:00'/><meta property='article:modified_time' content='2024-11-19T00:24:20&#43;08:00'/><meta property='og:image' content='https://blog.night1918.top/posts/23539/flutter.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='flutter' /><meta property='article:published_time' content='2024-10-21T14:17:19&#43;08:00'/><meta property='article:modified_time' content='2024-11-19T16:10:26&#43;08:00'/><meta property='og:image' content='https://blog.night1918.top/posts/23539/flutter.png' />
 <meta name="twitter:title" content="Windows搭建Flutter开发环境">
-<meta name="twitter:description" content="此文记录一下配置FLutter环境的步骤（防止自己忘记）\nSTEP 1: Java SDK 这里我使用的是jdk-17.0.8，官网地址Java Archive Downloads - Java SE 17，选择并下载Windows x64 Compressed Archive，如图：\n"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="此文记录一下配置FLutter环境的步骤（防止自己忘记）\nSTEP 1: Java SDK 这里我使用的是jdk-17.0.8，官网地址Java Archive Downloads - Java SE 17 ，选择并下载Windows x64 Compressed Archive，如图：\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://blog.night1918.top/posts/23539/flutter.png' />
     </head>
     <body class="
@@ -407,7 +407,16 @@
     <p>此文记录一下配置FLutter环境的步骤（防止自己忘记）</p>
 <h2 id="step-1-java-sdk">STEP 1: Java SDK
 </h2><p>这里我使用的是<code>jdk-17.0.8</code>，官网地址<a class="link" href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html"  target="_blank" rel="noopener"
-    >Java Archive Downloads - Java SE 17</a>，选择并下载<code>Windows x64 Compressed Archive</code>，如图：</p>
+    >Java Archive Downloads - Java SE 17
+    
+    <span style="white-space: nowrap;"><svg width=".7em"
+        height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+        <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+        <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+            fill="currentColor">
+    </svg></span>
+    
+</a>，选择并下载<code>Windows x64 Compressed Archive</code>，如图：</p>
 <p><img src="/posts/23539/flutter1.png"
 	width="1920"
 	height="896"
@@ -438,8 +447,26 @@
 </div>
 </div><h2 id="step-2-flutter-sdk">STEP 2: Flutter SDK
 </h2><p>从Flutter官网<a class="link" href="https://docs.flutter.dev/release/archive"  target="_blank" rel="noopener"
-    >Archive | Flutter</a>或者Github<a class="link" href="https://github.com/flutter/flutter/releases"  target="_blank" rel="noopener"
-    >Releases · flutter/flutter</a>获取Flutter，解压至你想安装的目录下，在环境变量<code>Path</code>中添加值<code>D:\Path\to\Flutter\bin\</code>，在<code>cmd</code>中运行<code>flutter --version</code>，若返回版本信息，则表明配置成功。</p>
+    >Archive | Flutter
+    
+    <span style="white-space: nowrap;"><svg width=".7em"
+        height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+        <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+        <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+            fill="currentColor">
+    </svg></span>
+    
+</a>或者Github<a class="link" href="https://github.com/flutter/flutter/releases"  target="_blank" rel="noopener"
+    >Releases · flutter/flutter
+    
+    <span style="white-space: nowrap;"><svg width=".7em"
+        height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+        <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+        <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+            fill="currentColor">
+    </svg></span>
+    
+</a>获取Flutter，解压至你想安装的目录下，在环境变量<code>Path</code>中添加值<code>D:\Path\to\Flutter\bin\</code>，在<code>cmd</code>中运行<code>flutter --version</code>，若返回版本信息，则表明配置成功。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -464,7 +491,16 @@
 </ul>
 <h2 id="step-3-android-sdk">STEP 3: Android SDK
 </h2><p>下载地址：<a class="link" href="https://developer.android.google.cn/studio"  target="_blank" rel="noopener"
-    >下载 Android Studio 和应用工具 - Android 开发者  | Android Developers</a></p>
+    >下载 Android Studio 和应用工具 - Android 开发者  | Android Developers
+    
+    <span style="white-space: nowrap;"><svg width=".7em"
+        height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+        <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+        <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+            fill="currentColor">
+    </svg></span>
+    
+</a></p>
 <p><img src="/posts/23539/flutter2.png"
 	width="1745"
 	height="646"
@@ -526,12 +562,39 @@
 </div><p>下载你需要的平台以及工具，还是在<code>D:\Android-SDK\cmdline-tools\latest\bin\</code>目录下打开<code>cmd</code>，输入<code>sdkmanager “platform-tools” “platforms;android-34”</code>安装<code>platform-tools</code>，输入<code>sdkmanager “build-tools;34.0.0”</code>安装<code>build-tools</code>。（这里你可以自行在刚刚的列表中选择你需要的平台和工具）</p>
 <h2 id="step-4-visual-studio">STEP 4: Visual Studio
 </h2><p>安装<code>Visual Studio</code>，官网地址：<a class="link" href="https://visualstudio.microsoft.com/zh-hans/downloads/"  target="_blank" rel="noopener"
-    >下载 Visual Studio Tools - 免费安装 Windows、Mac、Linux</a>，可以选择社区版，在安装界面勾选<code>使用C++的桌面开发</code>选项，在安装位置界面，根据需要选择是否修改IDE、缓存、SDK的存放路径。</p>
+    >下载 Visual Studio Tools - 免费安装 Windows、Mac、Linux
+    
+    <span style="white-space: nowrap;"><svg width=".7em"
+        height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+        <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+        <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+            fill="currentColor">
+    </svg></span>
+    
+</a>，可以选择社区版，在安装界面勾选<code>使用C++的桌面开发</code>选项，在安装位置界面，根据需要选择是否修改IDE、缓存、SDK的存放路径。</p>
 <h2 id="step-5-android-studio">STEP 5: Android Studio
 </h2><p>从官网获取并安装<code>Android Studio</code>，地址：<a class="link" href="https://developer.android.com/studio?hl=zh-cn"  target="_blank" rel="noopener"
-    >下载 Android Studio 和应用工具 - Android 开发者  | Android Developers</a>。</p>
+    >下载 Android Studio 和应用工具 - Android 开发者  | Android Developers
+    
+    <span style="white-space: nowrap;"><svg width=".7em"
+        height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+        <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+        <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+            fill="currentColor">
+    </svg></span>
+    
+</a>。</p>
 <p>( optional ) Android Studio汉化：从<code>Jetbrains</code>下载中文语言包，地址：<a class="link" href="https://plugins.jetbrains.com/plugin/13710-chinese-simplified-language-pack----/versions/stable"  target="_blank" rel="noopener"
-    >Chinese (Simplified) Language Pack / 中文语言包 Plugin for JetBrains IDEs | JetBrains Marketplace</a>，下载后在<code>Android Studio</code>的插件页面导入本地插件，选择下载的中文语言包，导入成功后重启IDE即可完成汉化。</p>
+    >Chinese (Simplified) Language Pack / 中文语言包 Plugin for JetBrains IDEs | JetBrains Marketplace
+    
+    <span style="white-space: nowrap;"><svg width=".7em"
+        height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+        <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+        <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+            fill="currentColor">
+    </svg></span>
+    
+</a>，下载后在<code>Android Studio</code>的插件页面导入本地插件，选择下载的中文语言包，导入成功后重启IDE即可完成汉化。</p>
 <h2 id="step-6-flutter-configure">STEP 6: Flutter Configure
 </h2><p>新增环境变量<code>ANDRIOD_HOME</code>，值为<code>Android SDK</code>安装目录，如<code>D:\Android-SDK\</code>，在<code>Path</code>中添加三个值：<code>%ANDROID_HOME%\tools</code>，<code>%ANDROID_HOME%\platform-tools</code>，<code>%ANDROID_HOME%\build-tools</code>，在<code>cmd</code>中运行<code>flutter config --android-sdk D:\Android-SDK\ </code>，向flutter指定<code>Android SDK</code>目录。</p>
 <p>检查<code>flutter</code>配置：在<code>cmd</code>中运行<code>flutter doctor </code>，查看各项配置是否正确。</p>
@@ -570,7 +633,16 @@
 </div><p>配置完成后，在<code>Android Studio</code>安装<code>flutter</code>和<code>dart</code>插件，开始<code>Flutter APP</code>的开发。</p>
 <h2 id="参考文档">参考文档
 </h2><p><a class="link" href="https://book.flutterchina.club/chapter1/install_flutter.html"  target="_blank" rel="noopener"
-    >1.3 搭建Flutter开发环境 | 《Flutter实战·第二版》</a></p>
+    >1.3 搭建Flutter开发环境 | 《Flutter实战·第二版》
+    
+    <span style="white-space: nowrap;"><svg width=".7em"
+        height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+        <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+        <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+            fill="currentColor">
+    </svg></span>
+    
+</a></p>
 
 </section>
 
@@ -606,7 +678,7 @@
 
 
         <span>
-            最后更新于 Nov 19, 2024 00:24 &#43;0800
+            最后更新于 Nov 19, 2024 16:10 &#43;0800
         </span>
     </section></footer>
 
@@ -750,6 +822,40 @@
     
 
     <footer class="site-footer">
+    
+    <section class="running-time">
+    本博客已运行
+    <span id="runningdays" class="running-days"></span>
+    </section>
+    
+    <section class="totalcount">
+        
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        发表了6篇文章 · 
+        总计11.99k字
+    </section>
     <section class="copyright">
         &copy; 
         
@@ -862,5 +968,27 @@
     }());
 </script>
 
+<script>
+    let s1 = '2022-05-01'; 
+    s1 = new Date(s1.replace(/-/g, "/"));
+    let s2 = new Date();
+    let timeDifference = s2.getTime() - s1.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    document.getElementById('runningdays').innerHTML = result;
+</script>
+<script src="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.css" crossorigin="anonymous" />
+<script>
+    NProgress.start();
+    document.addEventListener("readystatechange", () => {
+        if (document.readyState === "interactive") NProgress.inc(0.8);
+        if (document.readyState === "complete") NProgress.done();
+    });
+</script>
     </body>
 </html>

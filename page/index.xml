@@ -13,10 +13,21 @@
         <guid>https://blog.night1918.top/about/</guid>
         <description>&lt;p&gt;萌新一枚，喜欢折腾一些感兴趣的东西。&lt;/p&gt;
 &lt;p&gt;我的Github主页：&lt;a class=&#34;link&#34; href=&#34;https://github.com/Night1918&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Night1918&lt;/a&gt;&lt;/p&gt;
+    &gt;Night1918
+    
+    &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+        height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+        &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+        &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+            fill=&#34;currentColor&#34;&gt;
+    &lt;/svg&gt;&lt;/span&gt;
+    
+&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;联系方式：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Email: &lt;a class=&#34;link&#34; href=&#34;mailto:i@night1918.top&#34; &gt;i@night1918.top&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Email: &lt;a class=&#34;link&#34; href=&#34;mailto:i@night1918.top&#34; &gt;i@night1918.top
+    
+&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>
@@ -160,7 +171,16 @@ function formatDanmaku(str) {
         <guid>https://blog.night1918.top/link/</guid>
         <description>&lt;p&gt;欢迎交换友链哦~~~&lt;/p&gt;
 &lt;p&gt;在将您的网站添加到此页面之前，请先阅读&lt;a class=&#34;link&#34; href=&#34;https://github.com/Night1918/friends&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Night1918/friends&lt;/a&gt;。&lt;/p&gt;
+    &gt;Night1918/friends
+    
+    &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+        height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+        &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+        &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+            fill=&#34;currentColor&#34;&gt;
+    &lt;/svg&gt;&lt;/span&gt;
+    
+&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;如果您的网站满足所有要求，您可以按照提供的步骤提交您的网站信息！&lt;/p&gt;
 &lt;p&gt;(TIPS:卡片顺序每24h随机打乱)&lt;/p&gt;
 </description>

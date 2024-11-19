@@ -6,11 +6,11 @@
 
 <link rel='canonical' href='https://blog.night1918.top/archives/'>
 
-<link rel="stylesheet" href="/scss/style.min.49dd8baa7acaece75117d8cc807dfd058ecd9906f113f5aa64abff73cfff16d9.css"><meta property='og:title' content="文章">
+<link rel="stylesheet" href="/scss/style.min.390375ad308c11ef2451fb6199761dbab8c7a720354f2f7b00167a0741144043.css"><meta property='og:title' content="文章">
 <meta property='og:description' content="">
 <meta property='og:url' content='https://blog.night1918.top/archives/'>
 <meta property='og:site_name' content='夜辰 | Night1918 Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Page' /><meta property='article:modified_time' content='2024-11-19T00:24:20&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Page' /><meta property='article:modified_time' content='2024-11-19T16:10:26&#43;08:00'/>
 <meta name="twitter:title" content="文章">
 <meta name="twitter:description" content="">
     </head>
@@ -316,6 +316,55 @@
             </div>
         </div>
         
+        <section class="widget tagCloud">
+        <h2 class="section-title">Tags</h2>
+            <div class="tagCloud-tags">
+                
+                    
+                        
+                        <a href="/tags/api/" class="tagCloud-tags">
+                            api<span class="tagCloud-count">1</span>
+                        </a>
+                    
+                        
+                        <a href="/tags/BiliBili/" class="tagCloud-tags">
+                            bilibili<span class="tagCloud-count">1</span>
+                        </a>
+                    
+                        
+                        <a href="/tags/comment/" class="tagCloud-tags">
+                            comment<span class="tagCloud-count">1</span>
+                        </a>
+                    
+                        
+                        <a href="/tags/Dingtalk/" class="tagCloud-tags">
+                            dingtalk<span class="tagCloud-count">1</span>
+                        </a>
+                    
+                        
+                        <a href="/tags/email/" class="tagCloud-tags">
+                            email<span class="tagCloud-count">1</span>
+                        </a>
+                    
+                        
+                        <a href="/tags/flutter/" class="tagCloud-tags">
+                            flutter<span class="tagCloud-count">1</span>
+                        </a>
+                    
+                        
+                        <a href="/tags/vercel/" class="tagCloud-tags">
+                            vercel<span class="tagCloud-count">1</span>
+                        </a>
+                    
+                        
+                        <a href="/tags/Windows/" class="tagCloud-tags">
+                            windows<span class="tagCloud-count">1</span>
+                        </a>
+                    
+                
+            </div>
+        <section>
+        
     </header>
 
     
@@ -332,6 +381,7 @@
     <a href="/posts/23539.html">
         <div class="article-details">
             <h2 class="article-title">Windows搭建Flutter开发环境</h2>
+            
             <footer class="article-time">
                 <time datetime='2024-10-21T14:17:19&#43;08:00'>Oct 21, 2024</time>
             </footer>
@@ -352,6 +402,7 @@
     <a href="/posts/42610.html">
         <div class="article-details">
             <h2 class="article-title">bat脚本切换Windows夜间模式</h2>
+            
             <footer class="article-time">
                 <time datetime='2024-10-20T15:55:28&#43;08:00'>Oct 20, 2024</time>
             </footer>
@@ -371,6 +422,7 @@
     <a href="/posts/40080.html">
         <div class="article-details">
             <h2 class="article-title">Vercel部署API</h2>
+            
             <footer class="article-time">
                 <time datetime='2023-08-04T12:31:56&#43;08:00'>Aug 04, 2023</time>
             </footer>
@@ -391,6 +443,7 @@
     <a href="/posts/64109.html">
         <div class="article-details">
             <h2 class="article-title">下载钉钉直播回放的方法</h2>
+            
             <footer class="article-time">
                 <time datetime='2023-05-03T19:57:15&#43;08:00'>May 03, 2023</time>
             </footer>
@@ -411,6 +464,7 @@
     <a href="/posts/23918.html">
         <div class="article-details">
             <h2 class="article-title">下载b站装扮素材的方法</h2>
+            
             <footer class="article-time">
                 <time datetime='2023-04-08T22:00:11&#43;08:00'>Apr 08, 2023</time>
             </footer>
@@ -431,6 +485,7 @@
     <a href="/posts/17978.html">
         <div class="article-details">
             <h2 class="article-title">自定义Waline/Twikoo邮件通知样式</h2>
+            
             <footer class="article-time">
                 <time datetime='2023-01-24T18:28:56&#43;08:00'>Jan 24, 2023</time>
             </footer>
@@ -452,6 +507,40 @@
     
 
     <footer class="site-footer">
+    
+    <section class="running-time">
+    本博客已运行
+    <span id="runningdays" class="running-days"></span>
+    </section>
+    
+    <section class="totalcount">
+        
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        发表了6篇文章 · 
+        总计11.99k字
+    </section>
     <section class="copyright">
         &copy; 
         
@@ -486,5 +575,27 @@
     }());
 </script>
 
+<script>
+    let s1 = '2022-05-01'; 
+    s1 = new Date(s1.replace(/-/g, "/"));
+    let s2 = new Date();
+    let timeDifference = s2.getTime() - s1.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    document.getElementById('runningdays').innerHTML = result;
+</script>
+<script src="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.css" crossorigin="anonymous" />
+<script>
+    NProgress.start();
+    document.addEventListener("readystatechange", () => {
+        if (document.readyState === "interactive") NProgress.inc(0.8);
+        if (document.readyState === "complete") NProgress.done();
+    });
+</script>
     </body>
 </html>

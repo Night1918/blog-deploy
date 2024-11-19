@@ -6,11 +6,11 @@
 
 <link rel='canonical' href='https://blog.night1918.top/search/'>
 
-<link rel="stylesheet" href="/scss/style.min.49dd8baa7acaece75117d8cc807dfd058ecd9906f113f5aa64abff73cfff16d9.css"><meta property='og:title' content="搜索">
+<link rel="stylesheet" href="/scss/style.min.390375ad308c11ef2451fb6199761dbab8c7a720354f2f7b00167a0741144043.css"><meta property='og:title' content="搜索">
 <meta property='og:description' content="">
 <meta property='og:url' content='https://blog.night1918.top/search/'>
 <meta property='og:site_name' content='夜辰 | Night1918 Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Page' /><meta property='article:modified_time' content='2024-11-19T00:24:20&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Page' /><meta property='article:modified_time' content='2024-11-19T16:10:26&#43;08:00'/>
 <meta name="twitter:title" content="搜索">
 <meta name="twitter:description" content=""><link rel="alternate" type="application/json" href="https://blog.night1918.top/search/index.json"><link rel="preload" href="/search/index.json" as="fetch" crossorigin="anonymous">
     </head>
@@ -310,6 +310,40 @@
 </script><script type="text/javascript" src="/ts/search.js" defer></script>
 
 <footer class="site-footer">
+    
+    <section class="running-time">
+    本博客已运行
+    <span id="runningdays" class="running-days"></span>
+    </section>
+    
+    <section class="totalcount">
+        
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        发表了6篇文章 · 
+        总计11.99k字
+    </section>
     <section class="copyright">
         &copy; 
         
@@ -344,5 +378,27 @@
     }());
 </script>
 
+<script>
+    let s1 = '2022-05-01'; 
+    s1 = new Date(s1.replace(/-/g, "/"));
+    let s2 = new Date();
+    let timeDifference = s2.getTime() - s1.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    document.getElementById('runningdays').innerHTML = result;
+</script>
+<script src="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.css" crossorigin="anonymous" />
+<script>
+    NProgress.start();
+    document.addEventListener("readystatechange", () => {
+        if (document.readyState === "interactive") NProgress.inc(0.8);
+        if (document.readyState === "complete") NProgress.done();
+    });
+</script>
     </body>
 </html>

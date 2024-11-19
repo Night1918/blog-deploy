@@ -6,7 +6,7 @@
         <description>Recent content in 折腾 on 夜辰 | Night1918 Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Tue, 19 Nov 2024 00:24:20 +0800</lastBuildDate><atom:link href="https://blog.night1918.top/categories/%E6%8A%98%E8%85%BE/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 19 Nov 2024 16:10:26 +0800</lastBuildDate><atom:link href="https://blog.night1918.top/categories/%E6%8A%98%E8%85%BE/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>bat脚本切换Windows夜间模式</title>
         <link>https://blog.night1918.top/posts/42610.html</link>
         <pubDate>Sun, 20 Oct 2024 15:55:28 +0800</pubDate>
@@ -477,9 +477,27 @@
 &lt;p&gt;其中，&lt;code&gt;https://resource.night1918.top/avatar/avatar.png&lt;/code&gt;可替换为你的网站图标图片的url地址。&lt;/p&gt;
 &lt;h2 id=&#34;参考文章&#34;&gt;参考文章
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://waline.js.org/guide/features/notification.html#%e6%94%af%e6%8c%81%e7%9a%84%e5%8f%98%e9%87%8f&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Waline官方文档-评论通知&lt;/a&gt;&lt;/p&gt;
+    &gt;Waline官方文档-评论通知
+    
+    &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+        height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+        &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+        &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+            fill=&#34;currentColor&#34;&gt;
+    &lt;/svg&gt;&lt;/span&gt;
+    
+&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.zhheo.com/p/169a1abb.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Twikoo评论回复邮件模板：Acrylic Mail 粉 | 张洪Heo&lt;/a&gt;&lt;/p&gt;
+    &gt;Twikoo评论回复邮件模板：Acrylic Mail 粉 | 张洪Heo
+    
+    &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+        height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+        &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+        &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+            fill=&#34;currentColor&#34;&gt;
+    &lt;/svg&gt;&lt;/span&gt;
+    
+&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         

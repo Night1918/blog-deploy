@@ -7,11 +7,11 @@
 
 <link rel='canonical' href='https://blog.night1918.top/'>
 
-<link rel="stylesheet" href="/scss/style.min.49dd8baa7acaece75117d8cc807dfd058ecd9906f113f5aa64abff73cfff16d9.css"><meta property='og:title' content="夜辰 | Night1918 Blog">
+<link rel="stylesheet" href="/scss/style.min.390375ad308c11ef2451fb6199761dbab8c7a720354f2f7b00167a0741144043.css"><meta property='og:title' content="夜辰 | Night1918 Blog">
 <meta property='og:description' content="学习,就是发现自己越来越菜的过程">
 <meta property='og:url' content='https://blog.night1918.top/'>
 <meta property='og:site_name' content='夜辰 | Night1918 Blog'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-11-19T00:24:20&#43;08:00 '/>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-11-19T16:10:26&#43;08:00 '/>
 <meta name="twitter:title" content="夜辰 | Night1918 Blog">
 <meta name="twitter:description" content="学习,就是发现自己越来越菜的过程"><link rel="alternate" type="application/rss&#43;xml" href="https://blog.night1918.top/index.xml">
     </head>
@@ -345,7 +345,7 @@
             
         
             
-                <section class="widget tagCloud">
+                <section class="widget category">
     <div class="widget-icon">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -360,19 +360,18 @@
     </div>
     <h2 class="widget-title section-title">分类</h2>
 
-    <div class="tagCloud-tags">
+    <div class="category-label">
         
             <a href="/categories/%E6%8A%98%E8%85%BE/" class="font_size_3">
-                折腾
+                折腾<span class="category-count">3</span>
             </a>
         
             <a href="/categories/%E6%95%99%E7%A8%8B/" class="font_size_3">
-                教程
+                教程<span class="category-count">3</span>
             </a>
         
     </div>
 </section>
-
             
         
             
@@ -391,36 +390,44 @@
 
     <div class="tagCloud-tags">
         
+            
             <a href="/tags/api/" class="font_size_1">
-                Api
+                Api<span class="tagCloud-count2">1</span>
             </a>
         
+            
             <a href="/tags/BiliBili/" class="font_size_1">
-                BiliBili
+                BiliBili<span class="tagCloud-count2">1</span>
             </a>
         
+            
             <a href="/tags/comment/" class="font_size_1">
-                Comment
+                Comment<span class="tagCloud-count2">1</span>
             </a>
         
+            
             <a href="/tags/Dingtalk/" class="font_size_1">
-                Dingtalk
+                Dingtalk<span class="tagCloud-count2">1</span>
             </a>
         
+            
             <a href="/tags/email/" class="font_size_1">
-                Email
+                Email<span class="tagCloud-count2">1</span>
             </a>
         
+            
             <a href="/tags/flutter/" class="font_size_1">
-                Flutter
+                Flutter<span class="tagCloud-count2">1</span>
             </a>
         
+            
             <a href="/tags/vercel/" class="font_size_1">
-                Vercel
+                Vercel<span class="tagCloud-count2">1</span>
             </a>
         
+            
             <a href="/tags/Windows/" class="font_size_1">
-                Windows
+                Windows<span class="tagCloud-count2">1</span>
             </a>
         
     </div>
@@ -434,6 +441,18 @@
     
     
     
+    
+
+    
+    <div class="welcome">
+        <p style="font-size: 2rem; text-align: center; font-weight: bold">
+        <span class="shake">👋</span>
+        <span class="jump-text1" >Welcome</span>
+        <span class="jump-text2" >To</span>
+        <span class="jump-text3" style="color:#f48fb1">N</span><span class="jump-text4" style="color:#f48fb1">i</span><span class="jump-text5" style="color:#f48fb1">g</span><span class="jump-text6" style="color:#f48fb1">h</span><span class="jump-text7" style="color:#f48fb1">t</span><span class="jump-text8" style="color:#f48fb1">1</span><span class="jump-text9" style="color:#f48fb1">9</span><span class="jump-text10" style="color:#f48fb1">1</span><span class="jump-text11" style="color:#f48fb1">8</span>
+        <span class="jump-text12" style="color:#f48fb1">Blog</span>
+        </p>
+    </div>
     
 
     <section class="article-list">
@@ -902,6 +921,40 @@
         
     </section>
 <footer class="site-footer">
+    
+    <section class="running-time">
+    本博客已运行
+    <span id="runningdays" class="running-days"></span>
+    </section>
+    
+    <section class="totalcount">
+        
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        发表了6篇文章 · 
+        总计11.99k字
+    </section>
     <section class="copyright">
         &copy; 
         
@@ -935,5 +988,27 @@
     }());
 </script>
 
+<script>
+    let s1 = '2022-05-01'; 
+    s1 = new Date(s1.replace(/-/g, "/"));
+    let s2 = new Date();
+    let timeDifference = s2.getTime() - s1.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    document.getElementById('runningdays').innerHTML = result;
+</script>
+<script src="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.css" crossorigin="anonymous" />
+<script>
+    NProgress.start();
+    document.addEventListener("readystatechange", () => {
+        if (document.readyState === "interactive") NProgress.inc(0.8);
+        if (document.readyState === "complete") NProgress.done();
+    });
+</script>
     </body>
 </html>
