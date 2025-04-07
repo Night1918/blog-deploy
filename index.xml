@@ -2703,7 +2703,7 @@ function formatDanmaku(str) {
         
         <guid>https://blog.night1918.top/link/</guid>
         <description>&lt;p&gt;欢迎交换友链哦~~~&lt;/p&gt;
-&lt;p&gt;在将您的网站添加到此页面之前，请先阅读&lt;a class=&#34;link&#34; href=&#34;https://github.com/Night1918/friends&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;在将您的网站添加到此页面之前，请先阅读&lt;a class=&#34;link&#34; href=&#34;https://github.com/Night1918/blog-friends&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Night1918/friends
     
     &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
